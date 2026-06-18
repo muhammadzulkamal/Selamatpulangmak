@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Selamat Pulang Hajjah Ibu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+background:#07111f;
+color:white;
+}
+
+/* BACKGROUND */
+
+.hero{
+height:100vh;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(to bottom,
+#07111f 0%,
+#10233d 45%,
+#b07c3b 100%);
+}
+
+/* STARS */
+
+.star{
+position:absolute;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.2;}
+50%{opacity:1;}
+}
+
+/* MOON */
+
+.moon{
+position:absolute;
+top:80px;
+right:120px;
+width:140px;
+height:140px;
+border-radius:50%;
+background:#f7d87c;
+box-shadow:
+0 0 30px #f7d87c,
+0 0 60px #f7d87c;
+}
+
+.moon:after{
+content:"";
+position:absolute;
+top:0;
+left:35px;
+width:140px;
+height:140px;
+background:#07111f;
+border-radius:50%;
+}
+
+/* MOSQUE SILHOUETTE */
+
+.mosque{
+position:absolute;
+bottom:210px;
+width:100%;
+height:220px;
+background:
+url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='300'%3E%3Cpath fill='%23000000' d='M0 300V170h120v-50h40V60h40v60h40v50h140v-60h40v-40h40v40h40v60h180v-80h60v-70h60v70h60v80h180v-60h40v-40h40v40h40v60h180v-90h60v-60h60v60h60v90h180V300z'/%3E%3C/svg%3E");
+background-size:cover;
+opacity:.35;
+}
+
+/* DUNES */
+
+.dune1{
+position:absolute;
+bottom:0;
+width:120%;
+height:250px;
+background:#c08a45;
+border-radius:50%;
+left:-10%;
+}
+
+.dune2{
+position:absolute;
+bottom:-60px;
+width:120%;
+height:260px;
+background:#d9a056;
+border-radius:50%;
+left:10%;
+}
+
+/* CONTENT */
+
+.content{
+position:absolute;
+z-index:10;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+width:90%;
+}
+
+.badge{
+display:inline-block;
+padding:10px 25px;
+border:1px solid rgba(255,255,255,.3);
+backdrop-filter:blur(10px);
+border-radius:40px;
+margin-bottom:20px;
+background:rgba(255,255,255,.08);
+}
+
+h1{
+font-family:'Cinzel',serif;
+font-size:4rem;
+color:#ffd36e;
+text-shadow:0 0 25px rgba(255,211,110,.7);
+}
+
+.subtitle{
+margin-top:15px;
+font-size:1.2rem;
+letter-spacing:2px;
+}
+
+/* CARD */
+
+.profile-card{
+margin:40px auto 0;
+width:350px;
+max-width:90%;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.2);
+border-radius:25px;
+padding:20px;
+box-shadow:0 0 30px rgba(0,0,0,.4);
+animation:float 5s ease-in-out infinite;
+}
+
+.profile-card img{
+width:180px;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+border:4px solid #ffd36e;
+}
+
+.profile-card h2{
+margin-top:15px;
+color:#ffd36e;
+}
+
+.profile-card p{
+margin-top:8px;
+line-height:1.7;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+}
+
+/* MARQUEE */
+
+.marquee{
+position:absolute;
+bottom:15px;
+white-space:nowrap;
+font-size:2rem;
+font-weight:bold;
+color:#fff;
+animation:scrollText 18s linear infinite;
+}
+
+@keyframes scrollText{
+0%{
+transform:translateX(100%);
+}
+100%{
+transform:translateX(-100%);
+}
+}
+
+/* PARTICLES */
+
+.particle{
+position:absolute;
+background:#ffd36e;
+border-radius:50%;
+opacity:.7;
+animation:rise linear infinite;
+}
+
+@keyframes rise{
+from{
+transform:translateY(0);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+to{
+transform:translateY(-100vh);
+opacity:0;
+}
+}
+
+.clock{
+margin-top:20px;
+font-size:1.1rem;
+font-weight:600;
+color:#fff4c3;
+}
+
+.footer{
+padding:50px 20px;
+text-align:center;
+background:#08131f;
+}
+
+.footer h2{
+color:#ffd36e;
+margin-bottom:20px;
+}
+
+.footer p{
+max-width:900px;
+margin:auto;
+line-height:1.8;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:2.5rem;
+}
+
+.profile-card{
+width:95%;
+}
+
+.moon{
+width:90px;
+height:90px;
+right:30px;
+}
+
+.moon:after{
+width:90px;
+height:90px;
+left:25px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="moon"></div>
+
+<div class="mosque"></div>
+
+<div class="dune1"></div>
+<div class="dune2"></div>
+
+<div class="content">
+
+<div class="badge">
+🕋 Kepulangan Dari Tanah Suci Mekah
+</div>
+
+<h1>SELAMAT PULANG HAJJAH</h1>
+
+<p class="subtitle">
+Alhamdulillah, perjalanan ibadah haji telah disempurnakan
+</p>
+
+<div class="profile-card">
+
+<img src="1781774982512.png" alt="Ibu">
+
+<h2>Surita Binti Shahari</h2>
+
+<p>
+Selamat pulang ke tanah air setelah menunaikan
+ibadah haji di Baitullah.
+Semoga segala amal ibadah diterima Allah SWT,
+dikurniakan kesihatan yang baik,
+serta memperoleh haji yang mabrur.
+</p>
+
+<div class="clock" id="clock"></div>
+
+</div>
+
+</div>
+
+<div class="marquee">
+🌙 Selamat Pulang Hajjah Surita Binti Shahari • Semoga Mendapat Haji Mabrur • Ahlan Wa Sahlan Ya Hajjah 🌙
+</div>
+
+</section>
+
+<section class="footer">
+
+<h2>🕋 Doa Buat Ibu</h2>
+
+<p>
+Ya Allah, terimalah segala amal ibadah hajinya,
+ampunkan segala dosanya,
+kurniakan kesihatan yang berpanjangan,
+rezeki yang diberkati,
+serta jadikan beliau dalam kalangan hamba-Mu
+yang mendapat haji yang mabrur.
+Amin Ya Rabbal Alamin.
+</p>
+
+</section>
+
+<script>
+
+/* CLOCK */
+
+function updateClock(){
+const now = new Date();
+
+document.getElementById("clock").innerHTML =
+"Tarikh & Masa: " +
+now.toLocaleString('ms-MY');
+}
+
+setInterval(updateClock,1000);
+updateClock();
+
+/* STARS */
+
+for(let i=0;i<120;i++){
+
+let star=document.createElement('div');
+
+star.classList.add('star');
+
+star.style.left=Math.random()*100+'%';
+star.style.top=Math.random()*100+'%';
+
+star.style.animationDelay=Math.random()*3+'s';
+
+document.querySelector('.hero').appendChild(star);
+}
+
+/* GOLD PARTICLES */
+
+for(let i=0;i<35;i++){
+
+let p=document.createElement('div');
+
+p.classList.add('particle');
+
+let size=Math.random()*8+2;
+
+p.style.width=size+'px';
+p.style.height=size+'px';
+
+p.style.left=Math.random()*100+'%';
+p.style.bottom='0';
+
+p.style.animationDuration=
+(6+Math.random()*10)+'s';
+
+p.style.animationDelay=
+Math.random()*8+'s';
+
+document.querySelector('.hero').appendChild(p);
+}
+
+</script>
+
+</body>
+</html>
